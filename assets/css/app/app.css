@@ -1,0 +1,179 @@
+/* Font Includes */
+	/* icons */
+	@font-face {
+	  font-family: 'SPINIcons';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(../../fonts/spincard-icons.ttf) format('truetype');
+	}
+	/* Andale Mono */
+	@font-face {
+	  font-family: 'Andale Mono';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(../../fonts/andale-mono.ttf) format('truetype');
+	}
+	/* Rockwell */
+	@font-face {
+	  font-family: 'Sketch Rockwell';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(../../fonts/sketchrockwell-bold.ttf) format('truetype');
+	}
+	/* Helvetica Neue */
+	@font-face {
+	  font-family: 'Helvetica Neue';
+	  font-style: normal;
+	  font-weight: 100;
+	  src: url(../../fonts/helvetica-neue-ultra-light.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Helvetica Neue';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url(../../fonts/helvetica-neue-thin.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Helvetica Neue';
+	  font-style: italic;
+	  font-weight: 400;
+	  src: url(../../fonts/helvetica-neue-thin-italic.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Helvetica Neue';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url(../../fonts/helvetica-neue-light.ttf) format('truetype');
+	}
+/* ------------ */
+
+/* ------ Reset CSS ------ */
+*, *::after, *::before { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; 
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+ol, ul { list-style: none; list-style-position: inside; }
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: inherit;}
+blockquote::before, blockquote::after, q::before, q::after { content: ""; }
+blockquote, q { quotes: "" ""; }
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner { padding:0; border: 0; margin: 0; line-height: normal; }
+h1, h2, h3, h4, h5 { font-weight: inherit; }
+header, footer, nav, article, section { display: block; }
+
+/* Helper Styles */
+.clearAfter:after { content : ""; display: block; clear: both; }
+
+/* App Styles Below */
+/* ++++++++++++++++++++++ */
+body { -webkit-text-size-adjust: 100%; font-size: 14px; font-family: "Helvetica Neue", Serif, Times; font-weight: 400; line-height: 1; }
+input, select, textarea { font-size: 14px; font-family: Helvetica, Serif, Times; }
+
+	/* Headings */
+	
+	/* Logos */
+		/* Homepage / Login / Create Account */
+		.spinLogo1 { font-family: "SPINIcons"; font-size:200px; color:#FFF; margin:15px auto; width:200px; }
+		.spinLogo1:before { content: "\75"; }
+		.spinLogo2 { font-family: "SPINIcons"; font-size:50px; color:#00B259; margin:-10px auto 0; width:50px; height:40px;  }
+		.spinLogo2:before { content: "\75"; }
+	.iconSet { font-family: "SPINIcons"; margin:5px 2px; }
+	.iconFacebook:before { content: "\6a"; }
+	.iconFacebook, a.iconFacebook { color: rgb(59,89,152); }
+	.iconTwitter:before { content: "\6b"; }
+	.iconTwitter, a.iconTwitter { color: rgb(85,172,238); }
+	.iconLinkedin:before { content: "\6c"; }
+	.iconLinkedin, a.iconLinkedin { color: rgb(14,118,168); }
+	.iconEmail:before { content: "\68"; font-size: 24px; color:#00B259; }
+
+	/* Buttons */
+	.button1, .button2, .button3 { color: #fff; text-align: center; display: inline-block; vertical-align: middle; position: relative; font-weight: normal; line-height: 1; cursor: pointer; text-decoration: none; padding: 10px 20px; border-radius: 3px; box-shadow: 0 2px 2px rgba(0,0,0,.25); }
+		/* button1 [ positive action ] */
+		.button1 { border: 1px solid green; background-color: green;  }
+		.button1:hover, .button1:visited, .button1:active { color: #fff; }
+		/* button2 [ negative action ] */
+		.button2 { border: 1px solid red; background-color: red; }
+		.button2:hover, .button2:visited, .button2:active { color: #fff; }
+		/* button3 [ information action ] */
+		.button3 { border: 1px solid blue; background-color: blue; }
+		.button3:hover, .button3:visited, .button3:active { color: #fff; }
+/* ------------ */
+
+#page { position:absolute; width:100%; height:100%; }
+.segment { position:relative; min-height:100%; padding:15px 0; width:100%; overflow:hidden; }
+.wrapper { max-width:960px; margin:0 auto; }
+h2 { font-size:55px; padding:35px 0 15px 0; text-align:center; }
+h3 { font-size:30px; text-align:center; color:#999999; }
+h3.light { color:#FFF; }
+
+#segment1 { background: url('/assets/images/bg/bg2.jpg') center center; }
+#segment1 .slogan { color:#FFF; font-size:20px; text-align:center; margin-top:20px; }
+#segment1 .appLink { height:40px; float:right; margin:5px; }
+#segment1 .logo { height:100px; width:175px; color:#FF0000; }
+#segment1 iframe { margin: 0 auto; display:block; width:700px; height:393px; }
+
+#segment2 { background: #FFF; }
+#segment2 .phone { margin:20px auto 0; width:270px; }
+#segment2 .phone img { width:100%; }
+
+#segment3 { background: #00B259; }
+#segment3 .cardArea { text-align:center; }
+#segment3 .space { margin:5px; width:150px; height: 200px; position: relative; display: inline-block;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px; }
+#segment3 .card { width:100%; height:100%; position:absolute;
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	transition: transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d; }
+#segment3 .card figure { display: block; position: absolute; width: 100%; height: 100%; box-shadow:0px 0px 4px #444;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden; }
+#segment3 .card .back {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg ); }
+#segment3 .card.flipped {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg ); }
+#segment3 .card .front, #segment3 .card .back { border-radius:5px; overflow:hidden; }
+#segment3 .card .back { background: url('/assets/images/bg/bg3.png'); }
+#segment3 .card .back .cardHeader{ background:#FFF; padding:3px; }
+#segment3 .card .back span { display:block; width:100%; margin:5px; float:left; font-size:11px; text-align:left; }
+#segment3 .card .back span .iconSet { font-size:18px; }
+#segment3 .card .back .cardSpin { bottom:0; position:absolute; width:100%; padding:3px; background:#00B259; color:#FFF; font-weight:bold; font-size:18px; }
+
+#segment4 { background: #FFF; text-align:center; }
+#segment4 .appLink { height:100px; margin:30px 15px; }
+#segment4 .socialLinks { margin-bottom:25px; }
+#segment4 .socialLinks a { text-decoration:none; }
+#segment4 .socialLinks i { font-size:55px; }
+#segment4 .spinParty { font-size:20px; color:#333; display:block; margin:15px auto; }
+#segment4 .email { margin:30px auto; }
+#segment4 .footer { background: #00B259; padding:10px; font-size:12px; position:absolute; bottom:0; width:100%; text-align:center; color:#FFF; }
+
+/* mobile CSS */
+@media only screen and (max-device-width: 480px) {
+	#segment1 iframe { width:280px; height:155px; }
+	#segment1 .slogan { font-size:32px; margin-top:30px; }
+	#segment1 .appLink { display:none; }
+	#segment2 { margin-top:0; }
+	#segment2 .phone { width:200px; }
+	h2 { font-size:40px; }
+	.spinLogo1 { font-size:150px; width:150px; }
+}
