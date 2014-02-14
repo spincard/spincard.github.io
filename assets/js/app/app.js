@@ -1,7 +1,7 @@
 // App Javascript
 var App = {
 	Data : {
-	    
+		VimeoPlayProgress: 0
     },
 	Func : {
 		
@@ -34,6 +34,30 @@ $(function() {
 	setInterval(function() {
 		$('.card', cardArea).removeClass('flipped').eq(Math.floor(Math.random() * maxCards)).addClass('flipped');
 	}, 3000);
+	
+	// track MixPanel stuff
+	$("body").on('click','.trackMixPanel', function(evt) {
+		mixpanel.track($(this).data('trigger'));	
+	});
+	
+	//track if video is played
+	var iframe = $('#vimeo_player')[0],
+    player = $f(iframe);
+
+	player.addEvent('ready', function() {
+	    player.addEvent('play', function(){
+	    	mixpanel.track('Video started');
+	    });
+	    player.addEvent('pause', function(){
+	    	mixpanel.track('Video paused at ' + App.Data.VimeoPlayProgress + ' seconds');
+	    });
+	    player.addEvent('finish', function(){
+	    	mixpanel.track('Video completed');
+	    });
+	    player.addEvent('playProgress', function(data,id) {
+	    	App.Data.VimeoPlayProgress = Math.round(data.seconds);
+	    });
+	});
 });
 
 
