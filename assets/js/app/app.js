@@ -26,7 +26,7 @@ $(function() {
 	imgOrder = shuffle(imgOrder);
 	for(i=0; i<imgOrder.length; i++) {
 		var newCard = '<div class="space"><div class="card"><figure class="front"><img src="/assets/images/img/profiles/' + imgOrder[i] + '.png" /></figure>';
-		newCard += '<figure class="back"><div class="cardHeader"><div class="spinLogo2"><!-- --></div></div><span>Spincard User</span><span>555-1212</span><span>hello@wearenetworku.com</span><span>spincardapp.com</span><span><i class="iconFacebook iconSet"></i><i class="iconTwitter iconSet"></i><i class="iconLinkedin iconSet"></i></span><div class="cardSpin">ABC-123</div></figure></div></div>';
+		newCard += '<figure class="back"><div class="cardHeader"><div class="spinLogo2"><!-- --></div></div><span>Spincard User</span><span>555-1212</span><span>hello@wearenetworku.com</span><span>spincardapp.com</span><span><i class="iconFacebook iconSet"></i><i class="iconTwitter iconSet"></i><i class="iconLinkedin iconSet"></i></span><div class="cardSpin">ABC123</div></figure></div></div>';
 		cardArea.prepend(newCard);
 	}
 	
