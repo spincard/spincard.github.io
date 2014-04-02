@@ -52,6 +52,17 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
 b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
 mixpanel.init("8f7d4dcf9b3885b8bb3ac46f572eca4a");</script>
 		<!-- end Mixpanel -->
+		
+		<!-- Redirect to app store listing (iOS or Android) -->
+		<script type="text/javascript">
+		    if((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+				win=window.open('https://itunes.apple.com/us/app/spincard/id809150000', '_blank');
+		  		win.focus();
+		    } elseif ( (navigator.userAgent.indexOf('Android') != -1) ) {
+        		win=window.open('https://play.google.com/store/apps/details?id=com.wearenetworku.spincards', '_blank');
+		  		win.focus();
+    		}
+		</script>
    	</head>
 	<body>
 		<div id="page">
