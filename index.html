@@ -55,11 +55,13 @@ mixpanel.init("8f7d4dcf9b3885b8bb3ac46f572eca4a");</script>
 		
 		<!-- Redirect to app store listing (iOS or Android) -->
 		<script type="text/javascript">
-		    if((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
-		  		document.location = "https://itunes.apple.com/us/app/spincard/id809150000";
-		    } elseif ( (navigator.userAgent.indexOf('Android') != -1) ) {
-        		document.location = "https://play.google.com/store/apps/details?id=com.wearenetworku.spincards";
-    		}
+			if((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+				win=window.open('https://itunes.apple.com/us/app/spincard/id809150000', '_blank');
+		  		win.focus();
+	  		} else if ( (navigator.userAgent.indexOf('Android') != -1) ) {
+        		win=window.open('https://play.google.com/store/apps/details?id=com.wearenetworku.spincards', '_blank');
+		  		win.focus();
+	  		}
 		</script>
    	</head>
 	<body>
